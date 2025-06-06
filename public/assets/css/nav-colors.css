@@ -1,0 +1,97 @@
+/* Navigation Bar styling with the new color palette */
+
+/* Navigation backgrounds */
+.header-section,
+.nav-white,
+.main-menu,
+.navbar-custom {
+  background-color: #2f2e48 !important;
+}
+
+.header-fixed {
+  background-color: #2f2e48 !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Navigation text */
+.main-menu ul li a,
+.nav-link,
+.navbar-nav .nav-item .nav-link {
+  color: #faf9fe !important;
+}
+
+/* Navigation hover and active states */
+.main-menu ul li a:hover,
+.nav-link:hover,
+.navbar-nav .nav-item .nav-link:hover,
+.main-menu ul li.active a,
+.nav-link.active,
+.navbar-nav .nav-item.active .nav-link {
+  color: #452c9b !important;
+}
+
+/* Sub-menu/dropdown backgrounds */
+.sub-menu,
+.dropdown-menu {
+  background-color: #2f2e48 !important;
+  border-color: #d0cdef !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Sub-menu text */
+.sub-menu li a,
+.dropdown-item {
+  color: #faf9fe !important;
+}
+
+/* Sub-menu hover states */
+.sub-menu li a:hover,
+.dropdown-item:hover {
+  background-color: rgba(69, 44, 155, 0.1) !important;
+  color: #452c9b !important;
+}
+
+/* Mobile menu toggle button */
+.navbar-toggle-btn span {
+  background-color: #faf9fe !important;
+}
+
+.navbar-toggle-btn.open span {
+  background-color: #452c9b !important;
+}
+
+/* Search icon */
+.search-icon i,
+.search-trigger i {
+  color: #faf9fe !important;
+}
+
+.search-icon:hover i,
+.search-trigger:hover i {
+  color: #452c9b !important;
+}
+
+/* Navigation buttons */
+.nav-button,
+.header-button {
+  background-color: #452c9b !important;
+  color: #faf9fe !important;
+  border-color: #452c9b !important;
+}
+
+.nav-button:hover,
+.header-button:hover {
+  background-color: transparent !important;
+  color: #452c9b !important;
+}
+
+/* Mobile navigation */
+@media (max-width: 991px) {
+  .navbar-toggle-item {
+    background-color: #2f2e48 !important;
+  }
+  
+  .custom-nav {
+    background-color: #2f2e48 !important;
+  }
+}

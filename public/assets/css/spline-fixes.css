@@ -1,0 +1,45 @@
+/* Additional styles for the Spline viewer */
+
+/* Override Spline viewer default styles */
+spline-viewer {
+  background-color: transparent !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+  overflow: visible !important;
+}
+
+/* Prevent any outlines or borders when hovering */
+spline-viewer:hover {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Prevent canvas outlines and borders */
+spline-viewer canvas {
+  background-color: transparent !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Additional rule to prevent any Spline elements from showing outlines */
+.hero-spline-element * {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Handle any iframe or embedded elements from Spline */
+.hero-spline-element iframe,
+.hero-spline-element embed,
+.hero-spline-element object {
+  background-color: transparent !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}

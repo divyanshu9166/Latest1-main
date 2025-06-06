@@ -1,0 +1,55 @@
+/* Tailwind utilities for color scheme */
+
+.text-accent {
+  color: var(--colors--acent-color);
+}
+
+.bg-accent {
+  background-color: var(--colors--acent-color);
+}
+
+.border-accent {
+  border-color: var(--colors--acent-color);
+}
+
+.text-primary-gradient {
+  background: linear-gradient(135deg, var(--colors--gradient-color-01), var(--colors--acent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(135deg, var(--colors--gradient-color-01), var(--colors--acent-color));
+}
+
+.bg-radial {
+  background: radial-gradient(at 50% 10%, rgba(255, 255, 255, 0.04) 40%, var(--colors--gradient-color-01) 100%);
+}
+
+/* Add custom Tailwind utility classes */
+.bg-element {
+  background-color: var(--colors--element-color);
+}
+
+.bg-element-02 {
+  background-color: var(--colors--element-color-02);
+}
+
+.bg-element-03 {
+  background-color: var(--colors--element-color-03);
+}
+
+.border-element-stroke {
+  border-color: var(--colors--element-stroke-color);
+}
+
+.text-paragraph {
+  color: var(--colors--paragraph-font);
+}
+
+/* Custom animation class that can be added to any element */
+.animate-gradient-bg {
+  background-size: 200% 200%;
+  animation: gradientAnimation 8s ease infinite;
+}

@@ -1,0 +1,64 @@
+.hero-spline-element {
+    position: relative;
+    overflow: visible;
+    z-index: 5;
+    background-color: transparent !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+}
+
+/* Remove hover effects to prevent layout issues */
+.hero-spline-element:hover {
+    transform: none !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Make Spline responsive */
+@media (max-width: 1199px) {
+    .hero-spline-element {
+        width: 45% !important;
+    }
+    
+    .hero-v1-content {
+        max-width: 55% !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-spline-element {
+        position: relative !important;
+        width: 100% !important;
+        height: 350px !important;
+        top: auto !important;
+        right: auto !important;
+        transform: none !important;
+        margin-top: 30px;
+        order: 2;
+    }
+    
+    .hero-v1-content {
+        max-width: 100% !important;
+        order: 1;
+    }
+    
+    .hero-section-version1 .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-spline-element {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-spline-element {
+        height: 250px !important;
+    }
+}

@@ -1,0 +1,71 @@
+/* CSS Variable usage guarantees */
+
+/* This file provides guaranteed fallbacks for all CSS variables 
+   to ensure they work even if there are any loading issues */
+
+/* Color variables with defaults */
+:root {
+  /* These will only be used if the primary definitions fail to load */
+  --colors--bg-color: #02030a;
+  --colors--font-color: #fff;
+  --colors--paragraph-font: rgba(255, 255, 255, 0.8);
+  --colors--gradient-color-01: #2441c5;
+  --colors--acent-color: #d3fe37;
+  --colors--element-color: #05091c;
+  --colors--acent-color-low: #dfe5e1;
+  --colors--element-color-03: #0a133b;
+  --colors--element-color-02: #030611;
+  --colors--element-stroke-color: #0e1a4e;
+  --colors--gradient-color-02: #ffe2e2;
+}
+
+/* Critical element styling with both inline color and variables */
+body {
+  background-color: #02030a;
+  background-color: var(--colors--bg-color);
+  color: #fff;
+  color: var(--colors--font-color);
+}
+
+/* Core components with guaranteed colors */
+.main-menu, .header-section, .nav-white .nav {
+  background-color: #02030a !important;
+  background-color: var(--colors--bg-color) !important;
+}
+
+.nav-white .main-menu ul li a, 
+.main-menu ul li a {
+  color: #fff !important;
+  color: var(--colors--font-color) !important;
+}
+
+.main-menu ul li a:hover {
+  color: #d3fe37 !important;
+  color: var(--colors--acent-color) !important;
+}
+
+.footer-version-one {
+  background-color: #02030a;
+  background-color: var(--colors--bg-color);
+}
+
+.theme-clr {
+  color: #2441c5;
+  color: var(--colors--gradient-color-01);
+}
+
+/* SVG color enforcement */
+svg[id*="linear"] stop:first-child {
+  stop-color: #d3fe37;
+  stop-color: var(--colors--acent-color);
+}
+
+/* This ensures buttons have correct colors even if CSS vars fail */
+.cmn-btn, .btn-theme {
+  background-color: #2441c5;
+  background-color: var(--colors--gradient-color-01);
+  color: #fff;
+  color: var(--colors--font-color);
+  border-color: #2441c5;
+  border-color: var(--colors--gradient-color-01);
+}

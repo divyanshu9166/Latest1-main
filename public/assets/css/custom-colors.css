@@ -1,0 +1,63 @@
+/* Custom color updates for hero section */
+.hero-section-version1 .designers {
+  color: #4F6DD7 !important;
+  -webkit-text-stroke-color: #4F6DD7 !important;
+}
+
+.hero-section-version1 .designers::before {
+  -webkit-text-stroke: 1px #4F6DD7 !important;
+  color: #4F6DD7 !important;
+}
+
+/* Update button hover state to use our new theme color */
+.video-popup:hover i {
+  color: #4F6DD7 !important;
+}
+
+/* Update button styles to use the new blue theme */
+.btn-theme {
+  background-color: #4F6DD7;
+  border-color: #4F6DD7;
+}
+
+.btn-theme:hover {
+  color: #4F6DD7;
+}
+
+/* Update animation for Agency text */
+.designers::after {
+  color: #4F6DD7;
+}
+
+/* Update the Spline container styling */
+.hero-spline-element {
+  border: 1px solid rgba(79, 109, 215, 0.2);
+  box-shadow: 0 10px 30px rgba(79, 109, 215, 0.15);
+}
+
+.hero-spline-element:hover {
+  box-shadow: 0 15px 40px rgba(79, 109, 215, 0.25);
+}
+
+/* Update any accent colors */
+.text-theme {
+  color: #4F6DD7 !important;
+}
+
+.bg-theme {
+  background-color: #4F6DD7 !important;
+}
+
+/* Update the video popup button */
+.play-btn::before {
+  border-color: #4F6DD7;
+}
+
+.play-btn:hover {
+  background-color: #4F6DD7;
+}
+
+/* Update text highlight colors */
+::selection {
+  background: #4F6DD7;
+}

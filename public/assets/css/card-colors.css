@@ -1,0 +1,186 @@
+/* Card components styling with new color palette */
+
+.blog-item,
+.team-item,
+.pricing-item,
+.casestudy-item,
+.service-item,
+.project-item {
+  background-color: #2f2e48 !important;
+  border-color: #d0cdef !important;
+}
+
+/* Card headers */
+.blog-item h2, 
+.blog-item h3, 
+.blog-item h4,
+.team-item h2, 
+.team-item h3, 
+.team-item h4,
+.pricing-item h2, 
+.pricing-item h3, 
+.pricing-item h4,
+.casestudy-item h2, 
+.casestudy-item h3, 
+.casestudy-item h4,
+.service-item h2, 
+.service-item h3, 
+.service-item h4,
+.project-item h2, 
+.project-item h3, 
+.project-item h4 {
+  color: #faf9fe !important;
+}
+
+/* Card content text */
+.blog-item p,
+.team-item p,
+.pricing-item p,
+.casestudy-item p,
+.service-item p,
+.project-item p {
+  color: #faf9fe !important;
+  opacity: 0.9;
+}
+
+/* Card hover states */
+.blog-item:hover,
+.team-item:hover,
+.pricing-item:hover,
+.casestudy-item:hover,
+.service-item:hover,
+.project-item:hover {
+  border-color: #452c9b !important;
+}
+
+/* Card links */
+.blog-item a,
+.team-item a,
+.pricing-item a,
+.casestudy-item a,
+.service-item a,
+.project-item a {
+  color: #d0cdef !important;
+}
+
+.blog-item a:hover,
+.team-item a:hover,
+.pricing-item a:hover,
+.casestudy-item a:hover,
+.service-item a:hover,
+.project-item a:hover {
+  color: #452c9b !important;
+}
+
+/* Card buttons */
+.blog-item .btn,
+.team-item .btn,
+.pricing-item .btn,
+.casestudy-item .btn,
+.service-item .btn,
+.project-item .btn {
+  background-color: #452c9b !important;
+  color: #faf9fe !important;
+  border-color: #452c9b !important;
+}
+
+.blog-item .btn:hover,
+.team-item .btn:hover,
+.pricing-item .btn:hover,
+.casestudy-item .btn:hover,
+.service-item .btn:hover,
+.project-item .btn:hover {
+  background-color: transparent !important;
+  color: #452c9b !important;
+}
+
+/* Card borders and dividers */
+.card-border,
+.card-divider {
+  border-color: #d0cdef !important;
+}
+
+/* Footer of cards */
+.card-footer {
+  background-color: #252442 !important;
+  border-top-color: #d0cdef !important;
+}
+
+/* Price tags in cards */
+.price-tag,
+.pricing-amount {
+  color: #452c9b !important;
+}
+
+/* Featured or highlighted cards */
+.featured-card {
+  border-color: #452c9b !important;
+  box-shadow: 0 0 15px rgba(69, 44, 155, 0.2) !important;
+}
+
+/* Icons in cards */
+.card-icon {
+  color: #452c9b !important;
+}
+
+/* Card badges */
+.card-badge {
+  background-color: #452c9b !important;
+  color: #faf9fe !important;
+}
+
+/* Service Cards Specific */
+.service-card {
+  background-color: #2f2e48 !important;
+  border-color: #d0cdef !important;
+}
+
+.service-card:hover,
+.service-card.active {
+  border-color: #452c9b !important;
+}
+
+.service-card h3,
+.service-card h2 {
+  color: #faf9fe !important;
+}
+
+.service-card span {
+  color: #d0cdef !important;
+}
+
+/* Portfolio/Case Study Cards */
+.portfolio-item,
+.case-study-card {
+  background-color: #2f2e48 !important;
+}
+
+.portfolio-item .overlay,
+.case-study-card .overlay {
+  background-color: rgba(69, 44, 155, 0.8) !important;
+}
+
+/* Team member cards */
+.team-social a {
+  background-color: #2f2e48 !important;
+  color: #faf9fe !important;
+}
+
+.team-social a:hover {
+  background-color: #452c9b !important;
+}
+
+/* Testimonial cards */
+.testimonial-item {
+  background-color: #2f2e48 !important;
+  border-color: #d0cdef !important;
+}
+
+.testimonial-item .quote {
+  color: #452c9b !important;
+}
+
+/* Projects */
+.project-overlay {
+  background-color: rgba(47, 46, 72, 0.8) !important;
+}

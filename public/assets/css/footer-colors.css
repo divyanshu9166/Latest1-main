@@ -1,0 +1,101 @@
+/* Footer styling with the new color palette */
+
+/* Footer background */
+.footer-version-one,
+.footer-version-two,
+.footer-version-three,
+.footer-section {
+  background-color: var(--colors--bg-color) !important;
+}
+
+/* Footer headings */
+.footer-title,
+.footer-widget h5,
+.footer-widget h4,
+.footer-widget h3 {
+  color: var(--colors--font-color) !important;
+}
+
+/* Footer text */
+.footer-widget p,
+.footer-text,
+.footer-version-one p,
+.footer-version-two p,
+.footer-version-three p {
+  color: #d0cdef !important;
+}
+
+/* Footer links */
+.footer-widget a,
+.footer-link,
+.footer-version-one a,
+.footer-version-two a,
+.footer-version-three a {
+  color: #d0cdef !important;
+}
+
+.footer-widget a:hover,
+.footer-link:hover,
+.footer-version-one a:hover,
+.footer-version-two a:hover,
+.footer-version-three a:hover {
+  color: #452c9b !important;
+}
+
+/* Footer dividers and borders */
+.footer-divider,
+.footer-border,
+.footer-version-one hr,
+.footer-version-two hr,
+.footer-version-three hr {
+  border-color: rgba(208, 205, 239, 0.2) !important;
+}
+
+/* Footer social icons */
+.footer-social a,
+.common-social a,
+.social-link {
+  background-color: rgba(69, 44, 155, 0.1) !important;
+  color: #faf9fe !important;
+}
+
+.footer-social a:hover,
+.common-social a:hover,
+.social-link:hover {
+  background-color: #452c9b !important;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  background-color: #252442 !important;
+  border-top: 1px solid rgba(208, 205, 239, 0.1) !important;
+}
+
+/* Footer newsletter form */
+.footer-form input,
+.footer-newsletter input {
+  background-color: rgba(250, 249, 254, 0.05) !important;
+  border-color: rgba(208, 205, 239, 0.2) !important;
+  color: #faf9fe !important;
+}
+
+.footer-form button,
+.footer-newsletter button {
+  background-color: #452c9b !important;
+  color: #faf9fe !important;
+}
+
+/* Footer decorative elements */
+.footer-shape svg path {
+  fill: #452c9b !important;
+}
+
+/* Footer accent colors - svg gradient stops */
+#paint0_linear_6308_4304 stop {
+  stop-color: #452c9b !important;
+}
+
+#paint0_linear_6308_4304 stop:last-child {
+  stop-color: #452c9b !important;
+  stop-opacity: 0 !important;
+}

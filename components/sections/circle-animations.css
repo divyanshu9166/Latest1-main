@@ -1,0 +1,36 @@
+/* Circle animations for the concentric circles */
+.animate-rotate-slow {
+  animation: rotateSlow 25s linear infinite;
+}
+
+.animate-rotate-medium {
+  animation: rotateMedium 20s linear infinite;
+}
+
+.animate-rotate-fast {
+  animation: rotateFast 15s linear infinite;
+}
+
+.animate-rotate-reverse {
+  animation: rotateReverse 22s linear infinite;
+}
+
+@keyframes rotateSlow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateMedium {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateFast {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateReverse {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}

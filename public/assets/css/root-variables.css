@@ -1,0 +1,31 @@
+/* Root variables for the entire site 
+   This file must be imported before any other CSS to ensure variables are defined correctly */
+
+:root {
+  /* Main color palette for the website */
+  --colors--bg-color: #02030a;
+  --fonts--heading-font: "Neutral Sans Variable", Arial, sans-serif;
+  --colors--font-color: #fff;
+  --fonts--paragraph: Roboto, sans-serif;
+  --colors--paragraph-font: #fffc;
+  --colors--gradient-color-01: #2441c5;
+  --colors--acent-color: #d3fe37;
+  --colors--element-color: #05091c;
+  --colors--acent-color-low: #dfe5e1;
+  --colors--element-color-03: #0a133b;
+  --colors--element-color-02: #030611;
+  --colors--element-stroke-color: #0e1a4e;
+  --colors--gradient-color-02: #ffe2e2;
+  --stroke-color: #bea7ff1a;
+  --fonts--radius: 80px;
+}
+
+/* For debugging - add this class to any element to highlight CSS variable usage issues */
+.debug-borders * {
+  outline: 1px solid red;
+}
+
+.debug-colors {
+  background-color: var(--colors--bg-color);
+  color: var(--colors--font-color);
+}

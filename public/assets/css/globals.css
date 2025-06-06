@@ -1,0 +1,85 @@
+/* Main color palette for the website */
+:root {
+  --colors--bg-color: #02030a;
+  --fonts--heading-font: "Neutral Sans Variable", Arial, sans-serif;
+  --colors--font-color: #fff;
+  --fonts--paragraph: Roboto, sans-serif;
+  --colors--paragraph-font: #fffc;
+  --colors--gradient-color-01: #2441c5;
+  --colors--acent-color: #d3fe37;
+  --colors--element-color: #05091c;
+  --colors--acent-color-low: #dfe5e1;
+  --colors--element-color-03: #0a133b;
+  --colors--element-color-02: #030611;
+  --colors--element-stroke-color: #0e1a4e;
+  --colors--gradient-color-02: #ffe2e2;
+  --stroke-color: #bea7ff1a;
+  --fonts--radius: 80px;
+  
+  /* Keep compatibility with existing code */
+  --primary: #2441c5;     /* Changed to match gradient-color-01 */
+  --secondary: #d3fe37;   /* Changed to match acent-color */
+  --background: #02030a;  /* Changed to match bg-color */
+  --background-alt: #05091c; /* Changed to match element-color */
+  --accent: #0a133b;      /* Changed to match element-color-03 */
+  --text: #fff;        /* Changed to match font-color */
+  --text-secondary: #fffc; /* Changed to match paragraph-font */
+}
+
+body {
+  background-color: var(--colors--bg-color);
+  color: var(--colors--font-color);
+  font-family: var(--fonts--paragraph);
+}
+
+/* Some utility classes */
+.bg-primary { background-color: var(--colors--gradient-color-01); }
+.bg-secondary { background-color: var(--colors--acent-color); }
+.bg-dark { background-color: var(--colors--bg-color); }
+.bg-alt { background-color: var(--colors--element-color); }
+.bg-accent { background-color: var(--colors--element-color-03); }
+
+.text-primary { color: var(--colors--gradient-color-01); }
+.text-secondary { color: var(--colors--acent-color); }
+.text-white { color: var(--colors--font-color); }
+.text-muted { color: var(--colors--paragraph-font); }
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--colors--gradient-color-01), var(--colors--acent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--colors--gradient-color-01), var(--colors--acent-color));
+}
+
+.card {
+  background-color: var(--colors--element-color);
+  border-radius: var(--fonts--radius);
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.button-primary {
+  background: linear-gradient(90deg, var(--colors--gradient-color-01), var(--colors--acent-color));
+  color: var(--colors--font-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: calc(var(--fonts--radius) / 10);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--colors--font-color);
+  border: 2px solid var(--colors--gradient-color-01);
+  padding: 12px 24px;
+  border-radius: calc(var(--fonts--radius) / 10);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

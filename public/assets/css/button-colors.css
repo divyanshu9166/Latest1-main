@@ -1,0 +1,101 @@
+/* Button styling with the new color palette */
+
+/* Primary buttons */
+.btn-primary,
+.cmn-btn,
+.btn-theme,
+.theme-btn {
+  background-color: #452c9b !important;
+  color: #faf9fe !important;
+  border-color: #452c9b !important;
+}
+
+.btn-primary:hover,
+.cmn-btn:hover,
+.btn-theme:hover,
+.theme-btn:hover {
+  background-color: transparent !important;
+  color: #452c9b !important;
+  border-color: #452c9b !important;
+}
+
+/* Outlined buttons */
+.btn-outline-primary,
+.outline-btn {
+  background-color: transparent !important;
+  color: #452c9b !important;
+  border-color: #452c9b !important;
+}
+
+.btn-outline-primary:hover,
+.outline-btn:hover {
+  background-color: #452c9b !important;
+  color: #faf9fe !important;
+}
+
+/* Secondary buttons */
+.btn-secondary,
+.secondary-btn {
+  background-color: #2f2e48 !important;
+  color: #faf9fe !important;
+  border-color: #2f2e48 !important;
+}
+
+.btn-secondary:hover,
+.secondary-btn:hover {
+  background-color: transparent !important;
+  color: #2f2e48 !important;
+  border-color: #2f2e48 !important;
+}
+
+/* Link buttons */
+.btn-link {
+  color: #452c9b !important;
+}
+
+.btn-link:hover {
+  color: #352275 !important;
+  text-decoration: underline !important;
+}
+
+/* Button with icon */
+.icon-btn i,
+.btn-icon i {
+  color: #faf9fe !important;
+}
+
+.icon-btn:hover i,
+.btn-icon:hover i {
+  color: #452c9b !important;
+}
+
+/* Play button */
+.play-btn {
+  background-color: #452c9b !important;
+  color: #faf9fe !important;
+}
+
+.play-btn:hover {
+  background-color: #352275 !important;
+}
+
+/* Video popup button */
+.video-popup .icon {
+  background-color: #452c9b !important;
+}
+
+.video-popup:hover .icon i {
+  color: #faf9fe !important;
+}
+
+/* Social buttons */
+.social-btn,
+.social-link {
+  background-color: #2f2e48 !important;
+  color: #faf9fe !important;
+}
+
+.social-btn:hover,
+.social-link:hover {
+  background-color: #452c9b !important;
+}

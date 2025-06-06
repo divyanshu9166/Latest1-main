@@ -1,0 +1,92 @@
+/* Custom background styles */
+.bg-radial-gradient {
+  background: radial-gradient(at 50% 10%, rgba(255, 255, 255, 0.04) 40%, rgba(36, 65, 197, 1) 100%);
+}
+
+/* Override hero section background */
+.hero-section-version1 {
+  background: transparent !important;
+}
+
+/* Add z-index to make content appear above background */
+.hero-v1-content {
+  z-index: 2;
+  position: relative;
+}
+
+/* Global background colors */
+.bg1-clr,
+.bg2-clr,
+.bg3-clr,
+.bg4-clr {
+  background-color: var(--colors--bg-color) !important;
+}
+
+.bg-dark {
+  background-color: var(--colors--bg-color) !important;
+}
+
+.bg-light {
+  background-color: var(--colors--element-color) !important;
+}
+
+.bg-accent {
+  background-color: var(--colors--element-color-03) !important;
+}
+
+/* Text colors */
+.white-clr {
+  color: var(--colors--font-color) !important;
+}
+
+.pra-clr, 
+.spantext-clr {
+  color: var(--colors--paragraph-font) !important;
+}
+
+.theme-clr,
+.theme-color {
+  color: var(--colors--gradient-color-01) !important;
+}
+
+/* Add a gradient background class */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--colors--gradient-color-01), var(--colors--acent-color));
+}
+
+/* Border colors */
+.border-element {
+  border-color: var(--colors--element-stroke-color) !important;
+}
+
+/* Hover effects */
+.menu-link a:hover, 
+.flink-items:hover,
+.common-social a:hover,
+.theme-hover:hover {
+  color: var(--colors--acent-color) !important;
+  transition: color 0.3s ease;
+}
+
+.theme-border-hover:hover {
+  border-color: var(--colors--acent-color) !important;
+  transition: border-color 0.3s ease;
+}
+
+/* Icon hover effects */
+.rot60:hover i, 
+.ani-icons:hover i {
+  color: var(--colors--acent-color) !important;
+  transition: color 0.3s ease;
+}
+
+/* Button styling */
+.cmn-btn, .btn-theme {
+  background-color: var(--colors--gradient-color-01) !important;
+  color: var(--colors--font-color) !important;
+}
+
+.cmn-btn:hover, .btn-theme:hover {
+  background-color: var(--colors--acent-color) !important;
+  color: var(--colors--element-color-02) !important;
+}

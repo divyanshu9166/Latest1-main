@@ -1,0 +1,96 @@
+/* Additional form styling for color scheme */
+
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+  background-color: #2f2e48 !important;
+  border: 1px solid #d0cdef !important;
+  color: #faf9fe !important;
+}
+
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: #d0cdef !important;
+  opacity: 0.7;
+}
+
+/* Form labels */
+label {
+  color: #faf9fe !important;
+}
+
+/* Form focus states */
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #452c9b !important;
+  box-shadow: 0 0 0 0.25rem rgba(69, 44, 155, 0.25) !important;
+}
+
+/* Form buttons */
+.btn-primary,
+button[type="submit"] {
+  background-color: #452c9b !important;
+  border-color: #452c9b !important;
+  color: #faf9fe !important;
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover {
+  background-color: #352275 !important;
+  border-color: #352275 !important;
+}
+
+/* Form validation states */
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.is-valid {
+  border-color: #198754 !important;
+}
+
+/* Custom input fields used in ContactForm.jsx */
+[class*="Input_input"],
+[class*="Textarea_textarea"] {
+  background-color: #2f2e48 !important;
+  border-color: #d0cdef !important;
+  color: #faf9fe !important;
+}
+
+[class*="Input_input"]:focus,
+[class*="Textarea_textarea"]:focus {
+  border-color: #452c9b !important;
+  box-shadow: 0 0 0 1px #452c9b !important;
+}
+
+[class*="Form_form"] label {
+  color: #faf9fe !important;
+}
+
+/* Button styling */
+[class*="Button_button"] {
+  background-color: #452c9b !important;
+  color: #faf9fe !important;
+}
+
+[class*="Button_button"]:hover {
+  background-color: #352275 !important;
+}
+
+/* Fix for form fields that might be using different libraries */
+.form-area input,
+.form-area textarea {
+  background-color: #2f2e48 !important;
+  border-color: #d0cdef !important;
+  color: #faf9fe !important;
+}

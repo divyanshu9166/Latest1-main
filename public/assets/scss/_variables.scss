@@ -1,0 +1,50 @@
+:root {
+	/* Using the standardized color variables */
+	--colors--bg-color: #02030a;
+	--colors--font-color: #fff;
+	--colors--paragraph-font: #fffc;
+	--colors--gradient-color-01: #2441c5;
+	--colors--acent-color: #d3fe37;
+	--colors--element-color: #05091c;
+	--colors--acent-color-low: #dfe5e1;
+	--colors--element-color-03: #0a133b;
+	--colors--element-color-02: #030611;
+	--colors--element-stroke-color: #0e1a4e;
+	--colors--gradient-color-02: #ffe2e2;
+	--stroke-color: #bea7ff1a;
+	
+	/* Maintain backwards compatibility with the theme's variable naming */
+	--body: var(--colors--bg-color); 
+	--black: #000;
+	--white: var(--colors--font-color); 
+	--spantext: var(--colors--paragraph-font);
+	--theme: var(--colors--gradient-color-01);
+	--bg1: var(--colors--bg-color);
+	--bg2: var(--colors--element-color);
+	--bg3: var(--colors--element-color-03);
+	--bg4: var(--colors--element-color-02);
+	--border1: var(--colors--element-stroke-color);
+	--pra-clr: var(--colors--paragraph-font);
+	--dd-clr: var(--colors--font-color);
+	--place: var(--colors--acent-color-low);
+	--tag: #9b9b9b;
+	--bspan: var(--colors--paragraph-font);
+	--theme-secondary: var(--colors--acent-color);
+}
+
+// Theme Color - Default Colors
+$black: var(--black);
+$white: var(--white);
+$theme: var(--theme);
+$bg1: var(--bg1);
+$bg2: var(--bg2);
+$bg3: var(--bg3);
+$bg4: var(--bg4);
+$spantext: var(--spantext);
+$border1: var(--border1);
+$pra-clr: var(--pra-clr);
+$dd-clr: var(--dd-clr);
+$place: var(--place);
+$tag: var(--tag);
+$bspan: var(--bspan);
+$theme-secondary: var(--theme-secondary);

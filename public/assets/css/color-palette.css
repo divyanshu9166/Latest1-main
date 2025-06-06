@@ -1,0 +1,185 @@
+/* New Color Palette CSS */
+
+:root {
+  /* Main colors - using the new color variables */
+  --dark-bg: var(--colors--bg-color);
+  --accent: var(--colors--gradient-color-01);
+  --light-text: var(--colors--font-color);
+  --light-border: var(--colors--element-stroke-color);
+}
+
+/* Navigation Bar */
+.main-menu, .header-section, .nav-white .nav {
+  background-color: var(--dark-bg) !important;
+}
+
+.nav-white .main-menu ul li a, 
+.main-menu ul li a, 
+.nav-white .main-menu ul li a.active,
+.main-menu ul li a.active {
+  color: var(--light-text) !important;
+}
+
+.header-section .nav-white .main-menu ul li a:hover,
+.main-menu ul li a:hover {
+  color: var(--accent) !important;
+}
+
+.main-menu ul li.active > a,
+.main-menu ul li.current-page > a {
+  color: var(--accent) !important;
+}
+
+/* Buttons */
+.cmn-btn, 
+.btn-theme,
+.btn-primary,
+.hero-section-version1 .play-btn,
+.hero-expriencebox .expri-content .expri-cont-item h6 {
+  background-color: var(--accent) !important;
+  color: var(--light-text) !important;
+  border-color: var(--accent) !important;
+}
+
+.cmn-btn:hover, 
+.btn-theme:hover,
+.btn-primary:hover {
+  color: var(--accent) !important;
+  background-color: transparent !important;
+  border-color: var(--accent) !important;
+}
+
+/* Headers and Text */
+h1, h2, h3, h4, h5, h6,
+.white-clr,
+.hero-v1-content h1,
+.section-title h2,
+.section-title h3 {
+  color: var(--light-text) !important;
+}
+
+.text-theme {
+  color: var(--accent) !important;
+}
+
+span.designers {
+  color: var(--accent) !important;
+  -webkit-text-stroke-color: var(--accent) !important;
+}
+
+span.designers::before {
+  color: var(--accent) !important;
+}
+
+/* Card Components */
+.service-item, 
+.blog-item, 
+.team-item, 
+.pricing-item,
+.casestudy-item {
+  background-color: var(--dark-bg) !important;
+  border-color: var(--light-border) !important;
+}
+
+.service-item h3,
+.blog-item h3,
+.team-item h3,
+.pricing-item h3,
+.casestudy-item h3 {
+  color: var(--light-text) !important;
+}
+
+.service-item p,
+.blog-item p,
+.team-item p,
+.pricing-item p,
+.casestudy-item p {
+  color: var(--light-text) !important;
+  opacity: 0.9;
+}
+
+/* Forms */
+input, 
+textarea, 
+select,
+.form-control {
+  background-color: var(--dark-bg) !important;
+  border-color: var(--light-border) !important;
+  color: var(--light-text) !important;
+}
+
+input::placeholder, 
+textarea::placeholder {
+  color: rgba(250, 249, 254, 0.6) !important;
+}
+
+/* Footer */
+footer, 
+.footer-section {
+  background-color: var(--dark-bg) !important;
+}
+
+footer h3,
+footer h4,
+.footer-section h3,
+.footer-section h4 {
+  color: var(--light-text) !important;
+}
+
+footer p,
+footer a,
+.footer-section p,
+.footer-section a {
+  color: var(--light-text) !important;
+  opacity: 0.9;
+}
+
+footer a:hover,
+.footer-section a:hover {
+  color: var(--accent) !important;
+  opacity: 1;
+}
+
+.footer-bottom {
+  border-top-color: rgba(208, 205, 239, 0.2) !important;
+}
+
+/* Video Popup Button */
+.video-popup .icon {
+  background-color: var(--accent) !important;
+}
+
+.video-popup:hover .icon i {
+  color: var(--light-text) !important;
+}
+
+/* Experience Box */
+.hero-expriencebox {
+  background-color: var(--dark-bg) !important;
+  border-color: var(--light-border) !important;
+}
+
+/* Service Cards */
+.serviceCard {
+  background-color: var(--dark-bg) !important;
+  border-color: var(--light-border) !important;
+}
+
+.serviceCard:hover {
+  border-color: var(--accent) !important;
+}
+
+.serviceCard h3,
+.serviceCard h4 {
+  color: var(--light-text) !important;
+}
+
+/* Keep the designers text in accent color */
+.designers {
+  color: var(--accent) !important;
+  -webkit-text-stroke-color: var(--accent) !important;
+}
+
+.designers::before {
+  color: var(--accent) !important;
+}

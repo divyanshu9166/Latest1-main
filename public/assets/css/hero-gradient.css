@@ -1,0 +1,29 @@
+/* Custom gradient background for hero section */
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.04) 40%, rgba(102, 51, 238, 1) 100%);
+}
+
+/* Ensure hero section has transparent background */
+.hero-section-version1 {
+  background: transparent !important;
+}
+
+/* Ensure the 3D Spline element doesn't have a background */
+.hero-spline-element {
+  border: none;
+  box-shadow: none;
+  background-color: transparent !important;
+}
+
+/* Optimize for various screen sizes */
+@media (max-width: 991px) {
+  .bg-radial-gradient {
+    background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.04) 30%, rgba(102, 51, 238, 1) 100%);
+  }
+}
+
+@media (max-width: 767px) {
+  .bg-radial-gradient {
+    background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.04) 20%, rgba(102, 51, 238, 1) 100%);
+  }
+}
