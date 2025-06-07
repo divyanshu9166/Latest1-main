@@ -1,6 +1,6 @@
-import Layout from "@/components/layout/Layout"
+import Layout from "../../components/layout/Layout"
 import { Toaster } from "sonner";
-import  ContactPage from "@/components/sections/contact/ModernContactForm";
+import  ContactPage from "../../components/sections/contact/ModernContactForm";
 
 export default function Contact() {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import ConcentricCircle from './ConcentricCircle';
-import { Button } from '@/components/ui/button';
+import { Button } from './ui/button';
 import { ArrowUpRight } from 'lucide-react';
 
 const QuerySection: React.FC = () => {

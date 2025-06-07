@@ -1,6 +1,6 @@
 "use client";
 
-import { cn, MouseEnterContext, useMouseEnter } from "@/lib/utils";
+import { cn, MouseEnterContext, useMouseEnter } from "../../lib/utils";
 import React, {
   useState,
   useRef,

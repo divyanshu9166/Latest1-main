@@ -1,0 +1,111 @@
+/* 3D cube styles */
+.cube-wrapper {
+  perspective: 1500px; /* Increased perspective for better 3D effect */
+  perspective-origin: center center;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; /* Allow 3D effect to be visible */
+  transform: translateZ(0); /* Enable hardware acceleration */
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  transition: none !important;
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+.cube-face {
+  backface-visibility: hidden;
+  transition: none !important; /* Force no transition for immediate scroll response */
+  overflow: hidden;
+  will-change: transform; /* Optimize for frequent transform changes */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images fill the entire cube face */
+}
+
+/* Cube size is 256px, so translateZ should be 128px (half the cube size) */
+.cube-face.front {
+  transform: translateZ(128px);
+}
+
+.cube-face.back {
+  transform: rotateY(180deg) translateZ(128px);
+}
+
+.cube-face.right {
+  transform: rotateY(90deg) translateZ(128px);
+}
+
+.cube-face.left {
+  transform: rotateY(-90deg) translateZ(128px);
+}
+
+.cube-face.top {
+  transform: rotateX(90deg) translateZ(128px);
+}
+
+.cube-face.bottom {
+  transform: rotateX(-90deg) translateZ(128px);
+}
+
+/* Animation for service cards */
+.service-card {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.text-slide-left, .text-slide-right, .arrow-link {
+  opacity: 0;
+  animation: slideIn 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.text-slide-left {
+  transform: translateX(20vw);
+}
+
+.text-slide-right {
+  transform: translateX(-20vw);
+}
+
+.arrow-link {
+  transform: translateY(10vw);
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(var(--initial-x, 0)) translateY(var(--initial-y, 0));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* Hover animations */
+.arrow-link:hover .icon-wrapper-small {
+  background-color: #000;
+}
+
+.arrow-link:hover .button-up-icon {
+  filter: brightness(0) invert(1);
+}

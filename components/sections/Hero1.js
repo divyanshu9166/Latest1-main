@@ -2,10 +2,7 @@ import Link from "next/link"
 import VideoPopup from "../elements/VideoPopup"
 import dynamic from 'next/dynamic'
 
-// Dynamically import Spline to avoid SSR issues
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
-    ssr: false
-})
+
 
 export default function Hero1() {
     return (
@@ -55,18 +52,7 @@ export default function Hero1() {
                             </div>
                         </div>
                         
-                        {/* 3D Spline Element - Positioned to the right */}
-                        <div className="hero-spline-element" 
-                             style={{ 
-                                 height: '500px', 
-                                 width: '40%',
-                                 backgroundColor: 'transparent',
-                                 outline: 'none',
-                                 border: 'none',
-                                 boxShadow: 'none'
-                             }}>
-                            <Spline scene="https://prod.spline.design/Dmz-N1JjJVXuxsrZ/scene.splinecode" />
-                        </div>
+                    
                     </div>
                 </div>
                 {/* Hero Exprience box */}
@@ -96,6 +82,24 @@ export default function Hero1() {
                 {/* Element */}
                 <img src="/assets/img/element/arrow-right-storke.png" alt="img" className="hero-arrow" />
             </section>
+
+            {/* Adjustable height black section with 'SERVICES' text */}
+            <div style={{ background: '#000', minHeight: '60vh', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center' }}>
+                <h1 style={{
+                    color: '#fff',
+                    fontSize: '7vw',
+                    fontWeight: 900,
+                    letterSpacing: '0.05em',
+                    margin: 0,
+                    paddingTop: '2vw',
+                    fontFamily: 'inherit',
+                    textTransform: 'uppercase',
+                    lineHeight: 1.1
+                }}>
+                    SER<span style={{ fontWeight: 400, fontStyle: 'italic' }}>VICES</span>
+                </h1>
+                {/* Place your component here if needed */}
+            </div>
         </>
     )
 }

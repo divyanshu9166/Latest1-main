@@ -5,11 +5,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
-import { Form } from "@/components/ui/form";
+import { Form } from "../ui/form";
 import { formSchema, FormValues } from "./contact/ContactFormTypes";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Button } from "../ui/button";
 
 // Initialize EmailJS
 if (typeof window !== 'undefined') {

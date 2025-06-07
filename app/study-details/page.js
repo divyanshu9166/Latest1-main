@@ -1,5 +1,5 @@
 'use client'
-import Layout from "@/components/layout/Layout"
+import Layout from "../../components/layout/Layout"
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"

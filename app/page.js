@@ -1,24 +1,24 @@
-import Layout from "@/components/layout/Layout"
-import Blog1 from "@/components/sections/Blog1"
-import Hero1 from "@/components/sections/Hero1"
-import Product1 from "@/components/sections/Product1"
-import Team1 from "@/components/sections/Team1"
+"use client";
 
-import TextSLider1 from "@/components/sections/TextSLider1"
-import TextSLider2 from "@/components/sections/TextSLider2"
-import TextSLider3 from "@/components/sections/TextSLider3"
-import Watch1 from "@/components/sections/Watch1"
-import TeamSection from "@/components/sections/TeamSection"
-import { ParallaxScrollWith3DEffect } from "@/components/sections/ParallaxScrollWith3DEffect"
-import ServiceSection from "@/components/ServiceSection"
-import QueryProjectSection from "@/components/sections/QueryProjectSection.jsx"
-import Services from "@/components/Services"
+import Layout from "../components/layout/Layout"
+import Blog1 from "../components/sections/Blog1"
+import Hero1 from "../components/sections/Hero1"
+import Product1 from "../components/sections/Product1"
+import Team1 from "../components/sections/Team1"
+
+import TextSLider1 from "../components/sections/TextSLider1"
+import TextSLider2 from "../components/sections/TextSLider2"
+import TextSLider3 from "../components/sections/TextSLider3"
+import Watch1 from "../components/sections/Watch1"
+import TeamSection from "../components/sections/TeamSection"
+import { ParallaxScrollWith3DEffect } from "../components/sections/ParallaxScrollWith3DEffect"
+import QueryProjectSection from "../components/sections/QueryProjectSection.jsx"
 
 import dynamic from 'next/dynamic'
-import { AnimatedTestimonials } from "@/components/sections/animated-testimonials";
-
+import { AnimatedTestimonials } from "../components/sections/animated-testimonials"
+import Index from "../pages/Index"
 // Dynamic import with SSR disabled for client-only components
-const SmoothCursor = dynamic(() => import('@/components/ui/smooth-cursor'), {
+const SmoothCursor = dynamic(() => import('../components/ui/smooth-cursor'), {
     ssr: false
   })
    const testimonials = [
@@ -69,9 +69,12 @@ export default function Home() {
                     <SmoothCursor />
                     <Hero1 />
                     
+                    {/* Services Section with ServiceCube and ContentSection - Moved up for testing */}
+                    <div className="relative overflow-hidden">
+                        <Index />
+                    </div>
+                    
                     <Product1 />
-                    <ServiceSection />
-
                     <TextSLider1 />
                     <ParallaxScrollWith3DEffect />
                     <Watch1 />
@@ -81,7 +84,6 @@ export default function Home() {
                     <QueryProjectSection />
                     <TextSLider3 />
                     <TeamSection/>
-                    
                     
                 </div>
             </Layout>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import Link from "next/link";
 
