@@ -1,5 +1,3 @@
-
-
 import { useEffect, useRef, useState } from 'react';
 import ContentSection from "../components/ContentSection";
 import ServiceCube from "../components/ServiceCube";
@@ -30,11 +28,12 @@ const sections = [
 const Index = () => {
   const [activeSection, setActiveSection] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [cubePosition, setCubePosition] = useState<'sticky' | 'fixed' | 'sticky-bottom'>('sticky');
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
+  const cubeRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {    // Improved scroll progress calculation for smooth cube rotation
+  useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
       
@@ -42,33 +41,49 @@ const Index = () => {
       const containerTop = containerRect.top;
       const containerHeight = containerRect.height;
       const windowHeight = window.innerHeight;
+      const windowMiddle = windowHeight / 2;
       
-      // Check if Index section is visible
-      const isIndexVisible = containerTop < windowHeight && containerTop + containerHeight > 0;
-      setIsVisible(isIndexVisible);
+      // Get DESIGN section (first) and BRANDING section (last)
+      const designSection = sectionsRef.current[0];
+      const brandingSection = sectionsRef.current[sections.length - 1];
       
-      // Only calculate when the container is in view
-      if (!isIndexVisible) {
-        return;
+      if (!designSection || !brandingSection || !cubeRef.current) return;
+      
+      const designRect = designSection.getBoundingClientRect();
+      const brandingRect = brandingSection.getBoundingClientRect();
+      
+      // Calculate scroll progress through DESIGN to BRANDING
+      const startPoint = designRect.top;
+      const endPoint = brandingRect.bottom;
+      const totalDistance = endPoint - startPoint;
+      
+      let progress = 0;
+      if (totalDistance > 0) {
+        progress = Math.max(0, Math.min(1, (windowMiddle - startPoint) / totalDistance));
+      }
+      setScrollProgress(progress);
+      
+      // Update cube position based on scroll position
+      if (designRect.top > windowMiddle) {
+        // Cube is sticky to DESIGN section (top)
+        setCubePosition('sticky');
+      } else if (brandingRect.bottom > windowMiddle) {
+        // Cube is fixed in the center
+        setCubePosition('fixed');
+      } else {
+        // Cube is sticky to BRANDING section (bottom)
+        setCubePosition('sticky-bottom');
       }
       
-      // Calculate overall progress through the entire Index component
-      const totalProgress = Math.max(0, Math.min(1, -containerTop / (containerHeight - windowHeight)));
-      
-      // Smooth section-based progress
-      const sectionProgress = totalProgress * (sections.length - 1);
-      const currentSectionIndex = Math.floor(sectionProgress);
-      
       // Update active section based on scroll position
+      const sectionProgress = progress * (sections.length - 1);
+      const currentSectionIndex = Math.floor(sectionProgress);
       if (currentSectionIndex !== activeSection && currentSectionIndex >= 0 && currentSectionIndex < sections.length) {
         setActiveSection(currentSectionIndex);
       }
-      
-      // Set smooth scroll progress for cube rotation
-      setScrollProgress(totalProgress);
     };
 
-    // Throttle scroll events for better performance
+    // Throttle scroll events
     let ticking = false;
     const throttledScroll = () => {
       if (!ticking) {
@@ -86,14 +101,30 @@ const Index = () => {
     return () => {
       window.removeEventListener('scroll', throttledScroll);
     };
-  }, [activeSection]);  return (
+  }, [activeSection]);
+
+  return (
     <div ref={containerRef} className="relative w-full">
-      {/* Cube Container - Only visible when Index section is in view */}
-      {isVisible && (
-        <div className="fixed inset-0 pointer-events-none z-30 flex items-center justify-center">
-          <ServiceCube activeSection={activeSection} scrollProgress={scrollProgress} />
-        </div>
-      )}
+      {/* Cube Container with dynamic positioning */}
+      <div 
+        ref={cubeRef}
+        className={`pointer-events-none z-30 flex items-center justify-center ${
+          cubePosition === 'sticky' ? 'absolute top-0' : 
+          cubePosition === 'sticky-bottom' ? 'absolute bottom-0' : 
+          'fixed'
+        }`}
+        style={{
+          left: '50%',
+          transform: 'translateX(-50%)',
+          transition: 'top 0.1s ease, bottom 0.1s ease',
+          ...(cubePosition === 'fixed' ? { 
+            top: '50%', 
+            transform: 'translate(-50%, -50%)' 
+          } : {})
+        }}
+      >
+        <ServiceCube activeSection={activeSection} scrollProgress={scrollProgress} />
+      </div>
       
       {/* Content Sections */}
       <div className="relative z-20">

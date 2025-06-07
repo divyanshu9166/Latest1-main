@@ -24,17 +24,7 @@ import "/public/assets/css/hover-effects.css" /* Import hover effects last to ov
 import { Manrope, Plus_Jakarta_Sans } from 'next/font/google'
 import dynamic from 'next/dynamic'
 
-// Import the SmoothCursor component as a client component
-const SmoothCursor = dynamic(
-  () => import('../components/ui/smooth-cursor'),
-  { ssr: false }
-)
 
-// Import CSS Variable Checker
-const CssVariableChecker = dynamic(
-  () => import('../components/elements/CssVariableChecker'),
-  { ssr: false }
-)
 
 const manrope = Manrope({
     weight: ['300', '400', '500', '600', '700'],
@@ -58,8 +48,8 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={`${manrope.variable} ${jakarta.variable} position-relative bg2-clr`}>
                 {children}
-                <SmoothCursor />
-                <CssVariableChecker />
+                
+                
             </body>
         </html>
     )
