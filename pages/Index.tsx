@@ -8,7 +8,7 @@ const sections = [
   {
     title: "DESIGN",
     subtitle: "PROJECTS AND EXPERIENCES.",
-    bgColor: "from-purple-600 to-pink-600"
+    bgColor: "from-cyan-600 to-pink-600"
   },
   {
     title: "MARKETING", 

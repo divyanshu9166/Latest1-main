@@ -11,7 +11,7 @@ interface ContentSectionProps {
 
 const ContentSection = forwardRef<HTMLElement, ContentSectionProps>(
   ({ title, subtitle, index, isActive, bgGradient }, ref) => {
-    const isEven = index % 2 === 0;
+    const isEven = index % 1 === 0;
     
     return (
       <section
