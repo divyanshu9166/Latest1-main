@@ -86,7 +86,7 @@ export default function Hero1() {
             {/* Adjustable height black section with 'SERVICES' text */}
             <div style={{ background: '#000', minHeight: '60vh', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center' }}>
                 <h1 style={{
-                    color: '#fff',
+                    color: '#ggg',
                     fontSize: '7vw',
                     fontWeight: 900,
                     letterSpacing: '0.05em',

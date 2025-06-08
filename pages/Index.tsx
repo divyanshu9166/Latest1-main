@@ -88,6 +88,19 @@ const Index = () => {
     };
   }, [activeSection]);  return (
     <div ref={containerRef} className="relative w-full">
+      {/* Services Title Section */}
+      <div className="w-full bg-black flex flex-col justify-start items-center" style={{ minHeight: '60vh' }}>
+        <h1 className="text-white text-center font-black uppercase tracking-wide leading-tight m-0" 
+            style={{
+              fontSize: '7vw',
+              paddingTop: '2vw',
+              fontFamily: 'inherit',
+              lineHeight: 1.1
+            }}>
+          SER<span className="font-normal italic">VICES</span>
+        </h1>
+      </div>
+
       {/* Cube Container - Only visible when Index section is in view */}
       {isVisible && (
         <div className="fixed inset-0 pointer-events-none z-30 flex items-center justify-center">
